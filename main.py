@@ -98,7 +98,7 @@ async def ffmpegr(event):
   h = subp(cmd)
   #await event.reply(str(h))
   await m.edit('Uploading.....')
-  await bot.send_message(event.chat_id, file=out, thumb=generate_thumbnail(dl))
+  await bot.send_message(event.chat_id, video=out, thumb=generate_thumbnail(dl))
   await m.delete()
 
 @bot.on(events.NewMessage(pattern=r'/log'))
